@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title=""/>
+    <item
+        android:id="@+id/mapsFragment"
+        android:icon="@drawable/ic_baseline_arrow_upward_24"
+        android:title=""/>
+    <item
+        android:id="@+id/selectImageFragment"
+        android:icon="@drawable/ic_baseline_directions_run_24"
+        android:title=""/>
+    <item
+        android:id="@+id/consignmentFragment"
+        android:icon="@drawable/ic_baseline_arrow_downward_24"
+        android:title=""/>
+    <item
+        android:id="@+id/toDoPage4"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title=""/>
+</menu>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="consignment"
+            type="com.example.myunetlog.model.Consignment" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Kargo Tipi"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etYükTipi"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:text="@{consignment.cargoType}"
+            android:layout_height="wrap_content"
+            android:hint="Genel Kargo"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yükleme Adedi"/>
+
+        <EditText
+            android:id="@+id/etYüklemeAdedi"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:text="@{consignment.numberOfLoads}"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="243"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yükleme Saati"/>
+
+        <EditText
+            android:id="@+id/etYüklemeSaati"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:inputType="datetime"
+            android:text="@{consignment.loadingTime}"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:hint="14:30"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Çıkış Gümrük"/>
+
+        <EditText
+            android:id="@+id/etCikisGumruk"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:text="@{consignment.exitCustoms}"
+            android:layout_height="wrap_content"
+            android:hint="Kapı Kule"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Yükleme Tipi"/>
+
+        <EditText
+            android:id="@+id/etYüklemetipi"
+            android:textColor="@color/white"
+            android:text="@{consignment.loadType}"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:hint="Yükleme Tipi"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yüklerin kilosu"/>
+
+        <EditText
+            android:id="@+id/etYüklerinKilosu"
+            android:textColor="@color/white"
+            android:text="@{consignment.weightOfLoads}"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:hint="24 Ton"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hacim"/>
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/etHacim"
+            android:text="@{consignment.volume}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:hint="67 m3"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</layout>

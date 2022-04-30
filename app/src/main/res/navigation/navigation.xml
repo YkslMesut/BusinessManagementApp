@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mapsFragment">
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.myunetlog.view.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+
+        <action
+            android:id="@+id/action_mapsFragment_to_selectImageFragment"
+            app:destination="@id/selectImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectImageFragment"
+        android:name="com.example.myunetlog.view.SelectImageFragment"
+        android:label="fragment_select_image"
+        tools:layout="@layout/fragment_select_image" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/consignmentFragment"
+        android:name="com.example.myunetlog.view.ConsignmentFragment"
+        android:label="fragment_consignment"
+        tools:layout="@layout/fragment_consignment" >
+
+    </fragment>
+</navigation>

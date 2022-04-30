@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_fragment_container"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginEnd="2dp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            tools:context=".view.MapsActivity" >
+
+        </androidx.fragment.app.FragmentContainerView>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_margin="5dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_marginStart="30dp"
+                android:id="@+id/txtProvince"
+                android:text="Ümraniye"
+                android:fontFamily="sans-serif-black"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginStart="30dp"
+                android:id="@+id/txtNeighbourhood"
+                android:text="kazım karabekir"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginStart="30dp"
+                android:id="@+id/txtStreet"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="güzeltepe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="3"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_margin="10dp"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        map:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        map:cardBackgroundColor="#32049C"
+        map:cardCornerRadius="20dp"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Yükleme Akışı -1 / 4"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/btnAction"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Yükleme Noktasına Geldim"
+                    android:textSize="22dp"
+                    android:padding="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#32049C"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
